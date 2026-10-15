@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alumbrado de Medellín · Multi Travel</title>
+<meta name="description" content="Plan Navidad: Alumbrado de Medellín + Guatapé, Peñol, Comuna 13 y Metro Cable. Desde $499.000 por persona. Reserva tu cupo con $50.000.">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🎄 Alumbrado de Medellín — desde $499.000">
+<meta property="og:description" content="Guatapé, Peñol, ferry, Comuna 13, Metro Cable, hotel y desayunos. Reserva tu cupo con $50.000.">
+<meta property="og:image" content="https://haroldco45.github.io/alumbrado-medellin/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://haroldco45.github.io/alumbrado-medellin/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#d6001c;--red2:#a80016;--gold:#f6c64a;--ink:#0b0b0f;--bg:#fff;--soft:#f4f4f6;--line:#e3e3e8;--mut:#5b5b66;--green:#1f8a4c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",Barlow,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+.kicker{font-weight:800;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+section{padding:64px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 24px;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red2)}
+.btn-wa{background:#1fa855;color:#fff}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+
+/* top bar */
+.top{position:fixed;inset:0 0 auto;z-index:20;background:rgba(11,11,15,.82);backdrop-filter:blur(10px);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-family:"Barlow Condensed";font-weight:800;font-size:1.15rem;letter-spacing:.04em}
+.brand b{color:var(--red)}
+.top .btn{padding:9px 16px;font-size:.85rem}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#000}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:48px;padding-top:90px;width:100%}
+.hero .tag{display:inline-block;background:var(--red);padding:6px 12px;border-radius:4px;font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.hero h1{font-size:clamp(3rem,13vw,7.5rem);margin:14px 0 6px}
+.hero h1 span{color:var(--gold);display:block}
+.hero p.lead{font-size:clamp(1.05rem,3.6vw,1.35rem);max-width:620px;opacity:.95}
+.pricebox{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.price{background:#fff;color:var(--ink);border-radius:14px;padding:12px 18px}
+.price small{display:block;font-weight:800;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.price strong{font-family:"Barlow Condensed";font-size:2.4rem;line-height:1}
+.price.r{background:var(--red);color:#fff}.price.r small{color:#ffd9de}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px}
+
+/* countdown */
+.cd{background:var(--ink);color:#fff;padding:22px 0}
+.cd .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.cd .units{display:flex;gap:10px}
+.cd .u{background:#1c1c24;border-radius:10px;padding:8px 12px;text-align:center;min-width:64px}
+.cd .u b{font-family:"Barlow Condensed";font-size:1.9rem;display:block;line-height:1;color:var(--gold)}
+.cd .u i{font-style:normal;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+
+/* includes */
+.grid{display:grid;gap:14px}
+.inc{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:28px}
+.ic{background:var(--soft);border-radius:14px;padding:18px 14px}
+.ic .e{font-size:1.7rem}
+.ic h3{font-size:1.15rem;margin-top:8px}
+.ic p{font-size:.88rem;color:var(--mut);margin-top:4px}
+h2{font-size:clamp(2.2rem,8vw,3.6rem);margin-top:8px}
+.sub{color:var(--mut);max-width:640px;margin-top:10px;font-size:1.05rem}
+
+/* experiences */
+.exp{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:28px}
+.card{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;color:#fff;background:#222}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover img{transform:scale(1.05)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85))}
+.card .t{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}
+.card .t h3{font-size:1.9rem}
+.card .t p{font-size:.92rem;opacity:.92;margin-top:4px}
+.card .n{position:absolute;top:14px;left:14px;z-index:2;background:var(--red);font-weight:800;border-radius:999px;padding:4px 11px;font-size:.8rem}
+
+/* dark band */
+.dark{background:var(--ink);color:#fff}
+.dark .sub{color:#b9b9c4}
+.vids{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:28px}
+.vid{border-radius:16px;overflow:hidden;background:#000;position:relative}
+.vid video{width:100%;aspect-ratio:16/9;object-fit:cover}
+.vid span{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.6);padding:4px 10px;border-radius:999px;font-size:.78rem;font-weight:600}
+
+/* calculator */
+.calc{display:grid;gap:24px;grid-template-columns:1fr;margin-top:28px}
+@media(min-width:860px){.calc{grid-template-columns:1.1fr .9fr}}
+.panel{background:var(--soft);border-radius:18px;padding:22px}
+label{display:block;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:16px 0 6px}
+label:first-child{margin-top:0}
+input,select{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+input:focus,select:focus{outline:2px solid var(--red);border-color:transparent}
+.stepper{display:flex;align-items:center;gap:10px}
+.stepper button{width:46px;height:46px;border-radius:10px;border:0;background:var(--ink);color:#fff;font-size:1.4rem;cursor:pointer}
+.stepper output{font-family:"Barlow Condensed";font-size:2rem;min-width:48px;text-align:center}
+.sum{background:var(--ink);color:#fff;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #2a2a33;padding-bottom:10px}
+.row b{font-family:"Barlow Condensed";font-size:1.5rem}
+.row.big b{font-size:2.4rem;color:var(--gold)}
+.note{font-size:.82rem;color:#a9a9b5}
+.refline{font-size:.85rem;background:#1c1c24;border-radius:10px;padding:10px 12px}
+.refline b{color:var(--gold)}
+
+/* plan */
+.plan{margin-top:28px;display:grid;gap:14px}
+.step{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;background:var(--soft);border-radius:14px;padding:16px}
+.step .d{width:56px;height:56px;border-radius:12px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:"Barlow Condensed";font-size:1.3rem;text-align:center;line-height:1}
+.step h3{font-size:1.3rem}
+.step p{color:var(--mut);font-size:.95rem;margin-top:4px}
+
+/* flyer */
+.flyer{display:grid;gap:24px;align-items:center;grid-template-columns:1fr}
+@media(min-width:860px){.flyer{grid-template-columns:1fr 1fr}}
+.flyer img{border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:800;cursor:pointer;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--red);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mut);margin-top:8px}
+
+footer{background:var(--ink);color:#cfcfd8;padding:40px 0 110px;font-size:.88rem}
+footer h3{color:#fff;font-size:1.5rem;margin-bottom:10px}
+footer a{color:#fff}
+.credits{margin-top:20px;font-size:.75rem;opacity:.65}
+
+/* sticky */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+.sticky small{display:block;font-size:.72rem;color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.sticky strong{font-family:"Barlow Condensed";font-size:1.6rem;line-height:1}
+.sticky .btn{padding:12px 18px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <div class="brand">MULTI <b>TRAVEL</b> · NAVIDAD</div>
+  <a class="btn btn-red" href="#reserva">Reservar</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <img class="poster" src="https://images.unsplash.com/photo-1515366974328-f1181eb25189?w=1600&q=70&auto=format" alt="Medellín de noche">
+  <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1515366974328-f1181eb25189?w=1600&q=70&auto=format">
+    <source src="https://videos.pexels.com/video-files/17654328/17654328-uhd_2560_1440_24fps.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <span class="tag">🎄 Plan Navidad 2026</span>
+    <h1>Alumbrado <span>de Medellín</span></h1>
+    <p class="lead">Luces, cultura y destinos inolvidables: el alumbrado navideño más famoso de Colombia, Guatapé, la Piedra del Peñol, Comuna 13 y el Metro Cable en un solo viaje.</p>
+    <div class="pricebox">
+      <div class="price"><small>Desde · por persona</small><strong>$499.000</strong></div>
+      <div class="price r"><small>Reserva tu cupo con</small><strong>$50.000</strong></div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-red" href="#reserva">Calcular mi viaje</a>
+      <a class="btn btn-ghost" href="#incluye">¿Qué incluye?</a>
+    </div>
+  </div>
+</section>
+
+<div class="cd"><div class="wrap">
+  <div><div class="kicker" style="color:var(--gold)">Los cupos de diciembre vuelan</div><div style="font-weight:600">Faltan para Navidad:</div></div>
+  <div class="units" id="cd">
+    <div class="u"><b id="dd">--</b><i>días</i></div>
+    <div class="u"><b id="hh">--</b><i>horas</i></div>
+    <div class="u"><b id="mm">--</b><i>min</i></div>
+  </div>
+</div></div>
+
+<section id="incluye"><div class="wrap">
+  <div class="kicker">Todo resuelto</div>
+  <h2>El plan incluye</h2>
+  <p class="sub">Usted solo se monta y disfruta. Multi Travel pone el transporte, el hotel, el guía y la ruta.</p>
+  <div class="grid inc">
+    <div class="ic"><div class="e">🚌</div><h3>Transporte</h3><p>Ida y regreso con el grupo.</p></div>
+    <div class="ic"><div class="e">🏨</div><h3>Alojamiento</h3><p>1 noche de hotel.</p></div>
+    <div class="ic"><div class="e">☕</div><h3>2 desayunos</h3><p>Para arrancar con energía.</p></div>
+    <div class="ic"><div class="e">⛰️</div><h3>Guatapé y Peñol</h3><p>El pueblo de zócalos y la piedra.</p></div>
+    <div class="ic"><div class="e">⛴️</div><h3>Ferry</h3><p>Paseo en barco por el embalse.</p></div>
+    <div class="ic"><div class="e">🎨</div><h3>Comuna 13</h3><p>Grafitis, escaleras y cultura.</p></div>
+    <div class="ic"><div class="e">🚡</div><h3>Metro y Metro Cable</h3><p>Medellín desde el aire.</p></div>
+    <div class="ic"><div class="e">🛡️</div><h3>Seguro de viaje</h3><p>Viaje tranquilo.</p></div>
+    <div class="ic"><div class="e">🧭</div><h3>Guía acompañante</h3><p>Con usted todo el recorrido.</p></div>
+    <div class="ic"><div class="e">✨</div><h3>Alumbrados</h3><p>La noche más brillante del año.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="kicker">Lo que va a vivir</div>
+  <h2>Cuatro experiencias, un viaje</h2>
+  <div class="grid exp">
+    <div class="card"><span class="n">01</span><img loading="lazy" src="https://images.unsplash.com/photo-1512250431446-d0b4b57b27ec?w=900&q=70&auto=format" alt="Medellín al atardecer"><div class="t"><h3>Alumbrados</h3><p>Millones de luces sobre el río y los parques de la ciudad.</p></div></div>
+    <div class="card"><span class="n">02</span><img loading="lazy" src="https://images.unsplash.com/photo-1582568742002-499ac33758ce?w=900&q=70&auto=format" alt="Piedra del Peñol"><div class="t"><h3>Piedra del Peñol</h3><p>Más de 700 escalones hasta una de las mejores vistas de Antioquia.</p></div></div>
+    <div class="card"><span class="n">03</span><img loading="lazy" src="https://images.unsplash.com/photo-1625398244649-abc29446b6c6?w=900&q=70&auto=format" alt="Guatapé de colores"><div class="t"><h3>Guatapé + ferry</h3><p>Zócalos de colores y paseo en barco por el embalse.</p></div></div>
+    <div class="card"><span class="n">04</span><img loading="lazy" src="https://images.unsplash.com/photo-1715503234322-4edf36c85cf1?w=900&q=70&auto=format" alt="Mural de Comuna 13"><div class="t"><h3>Comuna 13</h3><p>Arte urbano, escaleras eléctricas y la historia de una transformación.</p></div></div>
+  </div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+  <div class="kicker" style="color:var(--gold)">Videos reales</div>
+  <h2>Así se ve Medellín</h2>
+  <p class="sub">Tome aire: esto es lo que le espera.</p>
+  <div class="grid vids">
+    <div class="vid"><span>Comuna 13</span><video muted loop playsinline controls preload="none" poster="https://images.unsplash.com/photo-1715503234322-4edf36c85cf1?w=900&q=60&auto=format"><source src="https://videos.pexels.com/video-files/12409200/12409200-uhd_2560_1440_30fps.mp4" type="video/mp4"></video></div>
+    <div class="vid"><span>Cable aéreo</span><video muted loop playsinline controls preload="none" poster="https://images.unsplash.com/photo-1548397968-8790c49522db?w=900&q=60&auto=format"><source src="https://videos.pexels.com/video-files/4203878/4203878-uhd_2560_1440_30fps.mp4" type="video/mp4"></video></div>
+    <div class="vid"><span>Medellín</span><video muted loop playsinline controls preload="none" poster="https://images.unsplash.com/photo-1515366974328-f1181eb25189?w=900&q=60&auto=format"><source src="https://videos.pexels.com/video-files/17654328/17654328-uhd_2560_1440_24fps.mp4" type="video/mp4"></video></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Ruta sugerida</div>
+  <h2>Su viaje, paso a paso</h2>
+  <div class="plan">
+    <div class="step"><div class="d">DÍA<br>1</div><div><h3>Salida y Comuna 13</h3><p>Viaje con el grupo, llegada a Medellín, recorrido por la Comuna 13 y paseo en Metro y Metro Cable.</p></div></div>
+    <div class="step"><div class="d">🌙</div><div><h3>Noche de alumbrados</h3><p>Recorrido por los alumbrados navideños y descanso en el hotel.</p></div></div>
+    <div class="step"><div class="d">DÍA<br>2</div><div><h3>Guatapé y el Peñol</h3><p>Desayuno, subida a la Piedra del Peñol, ferry por el embalse, pueblo de Guatapé y regreso.</p></div></div>
+  </div>
+  <p class="sub" style="font-size:.9rem">El orden exacto de las actividades lo confirma la agencia al reservar.</p>
+</div></section>
+
+<section id="reserva" style="background:var(--soft)"><div class="wrap">
+  <div class="kicker">Reserve en 1 minuto</div>
+  <h2>Calcule su viaje</h2>
+  <p class="sub">Arme su grupo y mande la reserva por WhatsApp directo a la agencia. Separa con solo $50.000 por persona.</p>
+  <div class="calc">
+    <div class="panel" style="background:#fff">
+      <label>Nombre de quien reserva</label>
+      <input id="nombre" placeholder="Ej: María Gómez" autocomplete="name">
+      <label>Ciudad desde donde sale</label>
+      <input id="ciudad" placeholder="Ej: Buga, Tuluá, Cali…">
+      <label>Fecha que prefiere</label>
+      <select id="fecha">
+        <option>La próxima salida disponible</option>
+        <option>Primera semana de diciembre</option>
+        <option>Segunda semana de diciembre</option>
+        <option>Semana de Navidad</option>
+        <option>Entre Navidad y Año Nuevo</option>
+        <option>Primera semana de enero</option>
+      </select>
+      <label>Número de personas</label>
+      <div class="stepper"><button type="button" id="menos" aria-label="Menos">−</button><output id="pax">2</output><button type="button" id="mas" aria-label="Más">+</button></div>
+    </div>
+    <div class="sum">
+      <div class="row"><span>Personas</span><b id="sPax">2</b></div>
+      <div class="row"><span>Valor por persona (desde)</span><b>$499.000</b></div>
+      <div class="row big"><span>Total aproximado</span><b id="sTot">$998.000</b></div>
+      <div class="row"><span>Para separar hoy</span><b id="sSep">$100.000</b></div>
+      <p class="note">Precio desde, por persona en acomodación múltiple. Habitación doble o sencilla y tarifa de niños: la agencia le confirma por WhatsApp.</p>
+      <div class="refline">Código de asesor: <b id="refShow">VIBRAS-HM</b></div>
+      <button class="btn btn-wa" id="enviar" style="width:100%">💬 Reservar por WhatsApp</button>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap flyer">
+  <img loading="lazy" src="volante.jpg" alt="Volante oficial Alumbrado de Medellín Multi Travel">
+  <div>
+    <div class="kicker">Volante oficial</div>
+    <h2>Compártalo con su familia</h2>
+    <p class="sub">Un plan perfecto para vivir en familia o con amigos. Mándelo al grupo de WhatsApp y armen el viaje juntos.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+      <button class="btn btn-red" id="share">📲 Compartir este plan</button>
+      <a class="btn" style="background:var(--ink);color:#fff" href="volante.jpg" download>Descargar volante</a>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="kicker">Preguntas frecuentes</div>
+  <h2>Antes de reservar</h2>
+  <div style="margin-top:20px">
+    <details><summary>¿Cuánto cuesta y cómo separo?</summary><p>Desde $499.000 por persona en acomodación múltiple. Separa su cupo con $50.000 por persona y el saldo se acuerda con la agencia.</p></details>
+    <details><summary>¿Cuáles son las fechas de salida?</summary><p>Las salidas son durante la temporada de alumbrados de diciembre. Escoja la fecha que prefiere en la calculadora y la agencia le confirma la salida disponible más cercana.</p></details>
+    <details><summary>¿Desde dónde sale el bus?</summary><p>Multi Travel está en Buga (Valle). Escriba su ciudad en la calculadora y le confirman el punto de encuentro.</p></details>
+    <details><summary>¿Hay que subir la Piedra del Peñol?</summary><p>Es opcional. Quien no quiera subir los escalones puede disfrutar el mirador de abajo y el pueblo de Guatapé.</p></details>
+    <details><summary>¿La agencia es legal?</summary><p>Sí, Multi Travel tiene Registro Nacional de Turismo RNT 245488. Siempre pida su comprobante de pago al separar.</p></details>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <h3>Agencia de viajes Multi Travel</h3>
+  <p>RNT 245488 · Carrera 9 # 6-55, Buga – Valle</p>
+  <p>WhatsApp: <a href="https://wa.me/573001440673">300 144 0673</a> · <a href="mailto:multitravel2025@gmail.com">multitravel2025@gmail.com</a> · Instagram y Facebook: @multitravel2025</p>
+  <p style="margin-top:14px">App hecha por <b>Vibras Positivas HM</b> · Caucasia, Antioquia.</p>
+  <p class="credits">Fotos: Unsplash. Videos: Pexels (Andrés Montoya, Franklin Eduardo, 530mediafilms). Imágenes de referencia de los destinos; el volante es de Multi Travel.</p>
+</div></footer>
+
+<div class="sticky">
+  <div><small>Separe con</small><strong>$50.000</strong></div>
+  <a class="btn btn-wa" href="#reserva">💬 Reservar</a>
+</div>
+
+<script>
+(function(){
+  var WA='573001440673', PRECIO=499000, SEPARA=50000, DEF='VIBRAS-HM';
+  var ref=DEF;
+  try{
+    var q=new URLSearchParams(location.search).get('ref');
+    if(q){ref=q.toUpperCase().replace(/[^A-Z0-9-]/g,'').slice(0,20)||DEF;localStorage.setItem('mt_ref',ref);}
+    else{ref=localStorage.getItem('mt_ref')||DEF;}
+  }catch(e){}
+  document.getElementById('refShow').textContent=ref;
+
+  var pax=2, fmt=function(n){return '$'+n.toLocaleString('es-CO');};
+  function pinta(){
+    document.getElementById('pax').textContent=pax;
+    document.getElementById('sPax').textContent=pax;
+    document.getElementById('sTot').textContent=fmt(pax*PRECIO);
+    document.getElementById('sSep').textContent=fmt(pax*SEPARA);
+  }
+  document.getElementById('mas').onclick=function(){if(pax<40){pax++;pinta();}};
+  document.getElementById('menos').onclick=function(){if(pax>1){pax--;pinta();}};
+  pinta();
+
+  document.getElementById('enviar').onclick=function(){
+    var n=document.getElementById('nombre').value.trim()||'(sin nombre)';
+    var c=document.getElementById('ciudad').value.trim()||'(por confirmar)';
+    var f=document.getElementById('fecha').value;
+    var msg='🎄 Hola Multi Travel, quiero reservar el plan *Alumbrado de Medellín*.\n\n'+
+      '👤 Nombre: '+n+'\n📍 Salgo desde: '+c+'\n📅 Fecha: '+f+'\n👥 Personas: '+pax+
+      '\n💰 Total aprox.: '+fmt(pax*PRECIO)+' (desde $499.000 c/u)'+
+      '\n✅ Para separar: '+fmt(pax*SEPARA)+
+      '\n\n🔖 Código de asesor: *'+ref+'*\n\n¿Me confirman fecha de salida y cómo hago el pago para separar?';
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
+  };
+
+  document.getElementById('share').onclick=function(){
+    var url=location.origin+location.pathname+'?ref='+encodeURIComponent(ref);
+    var txt='🎄✨ Plan Alumbrado de Medellín: Guatapé, Peñol, ferry, Comuna 13 y Metro Cable. Desde $499.000 y se separa con $50.000 👇';
+    if(navigator.share){navigator.share({title:'Alumbrado de Medellín',text:txt,url:url}).catch(function(){});}
+    else{window.open('https://wa.me/?text='+encodeURIComponent(txt+' '+url),'_blank');}
+  };
+
+  // cuenta regresiva a Navidad, hora Colombia (UTC-5)
+  var meta=new Date('2026-12-24T00:00:00-05:00').getTime();
+  function tic(){
+    var d=Math.max(0,meta-Date.now());
+    document.getElementById('dd').textContent=Math.floor(d/864e5);
+    document.getElementById('hh').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');
+    document.getElementById('mm').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');
+  }
+  tic();setInterval(tic,30000);
+
+  // videos de la galería: reproducir al verse
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){v.play&&v.play().catch(function(){});}else{v.pause();}});},{threshold:.5});
+    document.querySelectorAll('.vid video').forEach(function(v){io.observe(v);});
+  }
+  if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){});}
+})();
+</script>
+</body>
+</html>
